@@ -9,12 +9,16 @@ import tensorflow as tf
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 
 
-data_dir = "D:/speckle_detection_dataset/"
+data_dir = "speckle_detection_dataset/"
+sepckleDNet_file = 'specklednet_trained.h5'
 
 ## Loading the raw data including pathes with different dimensions
-train_xm, train_xc, train_y = pickle.load(open(data_dir + 'original_train_big_cleaned.pickle', 'rb'))
-test_xm, test_xc, test_y = pickle.load(open(data_dir + 'original_test_big_cleaned.pickle', 'rb'))
-validation_xm, validation_xc, validation_y = pickle.load(open(data_dir + 'original_validation_big_cleaned.pickle', 'rb'))
+train_xm, train_xc, train_y = pickle.load(open(
+        data_dir + 'train.pickle', 'rb'))
+test_xm, test_xc, test_y = pickle.load(open(
+        data_dir + 'test.pickle', 'rb'))
+validation_xm, validation_xc, validation_y = pickle.load(open(
+        data_dir + 'validation.pickle', 'rb'))
 
 ## Resizing the data to fit SpeckleDNet
 main_dims = (30, 30)
@@ -28,7 +32,7 @@ validation_Xm, validation_Xc, validation_Y = tools.construct_input_data(validati
                                        main_dims, comp_dims)
 
 ## Loading the pre-trained SpeckleDNet
-SpeckleDNet = tf.keras.models.load_model('specklednet_trained.h5')
+SpeckleDNet = tf.keras.models.load_model(sepckleDNet_file)
 
 
 ## Using SpeckleDNet for labeling the test data

@@ -71,13 +71,13 @@ comp_filter_ratio = 16
 main_dims = (30, 30, 1)
 comp_dims = (40, 40, 1)
 
-data_dir = "D:/speckle_detection_dataset/"
+data_dir = "speckle_detection_dataset/"
 train_xm, train_xc, train_y = pickle.load(open(
-        data_dir + 'original_train_big_cleaned.pickle', 'rb'))
+        data_dir + 'train.pickle', 'rb'))
 test_xm, test_xc, test_y = pickle.load(open(
-        data_dir + 'original_test_big_cleaned.pickle', 'rb'))
+        data_dir + 'test.pickle', 'rb'))
 validation_xm, validation_xc, validation_y = pickle.load(open(
-        data_dir + 'original_validation_big_cleaned.pickle', 'rb'))
+        data_dir + 'validation.pickle', 'rb'))
 
 train_Xm, train_Xc, train_Y = tools.construct_input_data(
         train_xm, train_xc, train_y, main_dims, comp_dims)
