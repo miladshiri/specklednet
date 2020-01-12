@@ -5,11 +5,11 @@ SpeckleDNet has been already trained on the train dataset and can be used in pra
 
 In case of using SpeckleDNet or the dataset, please cite the following study:
 
-"Ultrasound Speckle Detection for Tissue Tracking using a Dual-path Convolutional Neural Network", Milad Shiri – Hamid Behnam – Zahra Alizadeh Sani – Niloofar Nematollahi, 2020
+"Ultrasound Speckle Detection for Tissue Tracking using a Dual-path Convolutional Neural Network", Milad Shiri â€“ Hamid Behnam â€“ Zahra Alizadeh Sani â€“ Niloofar Nematollahi, 2020
 
 ## How to use?
 There is a test.py file for a quick use of SpeckleDNet. 
 
 ## Is it possible to train the model with different configurations? 
-Yes, it is. You can change the parameters in "create_and_train_specklednet.py" file and train the model again even with different dataset. 
+Yes, it is. You can change the parameters in "create_and_train_specklednet.py" file and train the model again even with a different dataset. 
 
